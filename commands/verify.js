@@ -8,9 +8,10 @@ module.exports = {
 		if (message.content.startsWith(`${prefix}verify`)) {
          const taggedUser = message.mentions.members.first();
          console.log(args[0]);
-         var x = taggedUser;
+         var x = taggedUser.toString().replace('@!', '@');
          console.log(x.toString());
-         if(args[0] == x.toString()){
+         if(args[0] == x.toString() || args[0] == taggedUser.toString()){
+            x = taggedUser;
             if(message.member.hasPermission("MANAGE_ROLES" || "ADMINISTRATOR")){
                if(!args[1]){
                   return message.reply(`you need to type the user's ign.`);
