@@ -11,7 +11,7 @@ module.exports = {
          var x = taggedUser;
          console.log(x.toString());
          if(args[0] == x.toString()){
-            if(message.member.guild.me.hasPermission("MANAGE_ROLES" || "ADMINISTRATOR")){
+            if(message.member.hasPermission("MANAGE_ROLES" || "ADMINISTRATOR")){
                if(!args[1]){
                   return message.reply(`you need to type the user's ign.`);
                }else{
