@@ -10,10 +10,15 @@ module.exports = {
             message.reply(`you need to tell us your in game name.`);
          }else{
             const taggedUser = message.mentions.members.first();
-            //console.log(args[0]);
+            
             var x = taggedUser.toString().replace('@!', '@');
+            var y = taggedUser.toString().replace('@', '@!');
+            console.log(args[0]);
+            //console.log(taggedUser);
+            console.log(x);
+            console.log(taggedUser.toString());
 
-            if(args[0] == x || args[0] == taggedUser.toString()){
+            if(args[0] == x || args[0] == taggedUser.toString() || args[0] == y){
                x = taggedUser;
                if(message.member.hasPermission("MANAGE_ROLES" || "ADMINISTRATOR")){
                   if(!args[1]){
