@@ -44,7 +44,4 @@ client.on('message', message => {
 
 // login to Discord with your app's token
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
-});
 client.login(process.env.BOT_TOKEN);
